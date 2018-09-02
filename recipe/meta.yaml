@@ -11,7 +11,7 @@ source:
   sha256: 2f192977b47406ae8992292c7e841ef23d4656bf72f6140540bed53af68e06ed
 
 build:
-  number: 0
+  number: 1
   script: "$SRC_DIR/install.sh $PREFIX"  # [unix]
   script: "del %SRC_DIR%\\build\\CMakeCache.txt && %SRC_DIR%\\install.bat %PREFIX%"  # [win]
 
