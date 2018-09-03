@@ -24,7 +24,7 @@ Current build status
 
 [![Linux](https://img.shields.io/circleci/project/github/conda-forge/sdsl-lite-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/sdsl-lite-feedstock)
 [![OSX](https://img.shields.io/travis/conda-forge/sdsl-lite-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/sdsl-lite-feedstock)
-![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/sdsl-lite-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/sdsl-lite-feedstock/branch/master)
 
 Current release info
 ====================
