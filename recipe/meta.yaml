@@ -11,7 +11,7 @@ source:
   sha256: 2f192977b47406ae8992292c7e841ef23d4656bf72f6140540bed53af68e06ed
 
 build:
-  number: 0
+  number: 1
   script: "$SRC_DIR/install.sh $PREFIX"  # [unix]
   # TODO: fix Windows build/testing
   skip: true  # [win]
@@ -21,11 +21,15 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - cmake
+  run:
+    - {{ compiler('cxx') }}
 
 test:
+  source_files:
+    - Make.helper
+    - examples
   commands:
-    - test -f $PREFIX/lib/libsdsl.a  # [unix]
-    - if not exist %LIBRARY_LIB%\sdsl.lib exit 1  # [win]
+    - cd examples && make fm-index.x intersect.x MY_CXX=g++ LIB_DIR=$PREFIX/lib INC_DIR=$PREFIX/include
 
 about:
   home: https://github.com/simongog/sdsl-lite
@@ -47,3 +51,4 @@ about:
 extra:
   recipe-maintainers:
     - jvolkening
+    - johnlees
