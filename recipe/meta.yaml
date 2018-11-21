@@ -29,7 +29,7 @@ test:
     - Make.helper
     - examples
   commands:
-    - cd examples && make fm-index.x intersect.x MY_CXX=g++ LIB_DIR=$PREFIX/lib INC_DIR=$PREFIX/include
+    - cd examples && make fm-index.x intersect.x LIB_DIR=$PREFIX/lib INC_DIR=$PREFIX/include
 
 about:
   home: https://github.com/simongog/sdsl-lite
