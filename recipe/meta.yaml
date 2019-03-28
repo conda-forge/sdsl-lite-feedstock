@@ -11,7 +11,7 @@ source:
   sha256: 2f192977b47406ae8992292c7e841ef23d4656bf72f6140540bed53af68e06ed
 
 build:
-  number: 1
+  number: 1001
   script: "$SRC_DIR/install.sh $PREFIX"  # [unix]
   # TODO: fix Windows build/testing
   skip: true  # [win]
@@ -29,7 +29,7 @@ test:
     - Make.helper
     - examples
   commands:
-    - cd examples && make fm-index.x intersect.x MY_CXX=g++ LIB_DIR=$PREFIX/lib INC_DIR=$PREFIX/include
+    - cd examples && make fm-index.x intersect.x LIB_DIR=$PREFIX/lib INC_DIR=$PREFIX/include
 
 about:
   home: https://github.com/simongog/sdsl-lite
