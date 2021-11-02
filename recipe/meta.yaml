@@ -1,14 +1,13 @@
 {% set name = "sdsl-lite" %}
-{% set version = "2.1.1" %}
+{% set version = "3.0.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/simongog/{{ name }}/releases/download/v{{ version }}/{{ name }}-{{ version }}.tar.gz.offline.install.gz
-  fn: {{ name }}.tar.gz # necessary because of the nonstandard file extension from upstream
-  sha256: 2f192977b47406ae8992292c7e841ef23d4656bf72f6140540bed53af68e06ed
+  url: https://github.com/xxsds/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz 
+  sha256: 85196ff4e621dbb2cddd80a2a47c6a65854557b27e375999615ae899b233e70b
 
 build:
   number: 1001
