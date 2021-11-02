@@ -32,8 +32,8 @@ test:
 
 about:
   home: https://github.com/simongog/sdsl-lite
-  license: GPL-3
-  license_family: GPL
+  license: BSD
+  license_family: BSD
   summary: 'The Succinct Data Structure Library (SDSL)'
   description: |
     The Succinct Data Structure Library (SDSL) is a powerful and flexible C++11
