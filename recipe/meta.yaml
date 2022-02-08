@@ -31,6 +31,7 @@ requirements:
 test:
   requires:
     - {{ compiler('cxx') }}
+    - make  # [linux]
   source_files:
     - Make.helper
     - examples
