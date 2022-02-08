@@ -3,7 +3,7 @@ About sdsl-lite
 
 Home: https://github.com/simongog/sdsl-lite
 
-Package license: GPL-3
+Package license: GPL-3.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sdsl-lite-feedstock/blob/master/LICENSE.txt)
 
@@ -156,4 +156,5 @@ Feedstock Maintainers
 
 * [@johnlees](https://github.com/johnlees/)
 * [@jvolkening](https://github.com/jvolkening/)
+* [@yp](https://github.com/yp/)
 
