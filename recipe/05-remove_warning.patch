@@ -1,0 +1,22 @@
+From 8f048b9700c15f7ff74ca7f4fcaa31467a1fc5a3 Mon Sep 17 00:00:00 2001
+From: amallia <me@antoniomallia.it>
+Date: Wed, 25 Jan 2017 00:34:46 +0000
+Subject: [PATCH] Removed warning for address never null
+
+---
+ include/sdsl/io.hpp | 2 --
+ 1 file changed, 2 deletions(-)
+
+diff --git a/include/sdsl/io.hpp b/include/sdsl/io.hpp
+index 7240926c..53a618e5 100644
+--- a/include/sdsl/io.hpp
++++ b/include/sdsl/io.hpp
+@@ -635,8 +635,6 @@ bool store_to_cache(const T& v, const std::string& key, cache_config& config, bo
+ template<class T>
+ typename T::size_type size_in_bytes(const T& t)
+ {
+-    if ((&t) == nullptr)
+-        return 0;
+     nullstream ns;
+     return serialize(t, ns);
+ }

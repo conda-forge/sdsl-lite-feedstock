@@ -9,10 +9,15 @@ source:
   url: https://github.com/simongog/{{ name }}/releases/download/v{{ version }}/{{ name }}-{{ version }}.tar.gz.offline.install.gz
   fn: {{ name }}.tar.gz # necessary because of the nonstandard file extension from upstream
   sha256: 2f192977b47406ae8992292c7e841ef23d4656bf72f6140540bed53af68e06ed
+  patches:
+    - 00-missing_stdcout.patch
+    - 01-fix_version.patch
+    - 05-remove_warning.patch
+    - 10-default_verbose_install.patch
+    - 15-fix_cmake.patch
 
 build:
-  number: 1001
-  script: "$SRC_DIR/install.sh $PREFIX"  # [unix]
+  number: 1002
   # TODO: fix Windows build/testing
   skip: true  # [win]
   #script: "del %SRC_DIR%\\build\\CMakeCache.txt && %SRC_DIR%\\install.bat %PREFIX%"  # [win]
@@ -21,19 +26,21 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - cmake
-  run:
-    - {{ compiler('cxx') }}
+    - make  # [linux]
 
 test:
+  requires:
+    - {{ compiler('cxx') }}
+    - make  # [linux]
   source_files:
     - Make.helper
     - examples
   commands:
-    - cd examples && make fm-index.x intersect.x LIB_DIR=$PREFIX/lib INC_DIR=$PREFIX/include
+    - cd examples && make all LIB_DIR=$PREFIX/lib INC_DIR=$PREFIX/include
 
 about:
   home: https://github.com/simongog/sdsl-lite
-  license: GPL-3
+  license: GPL-3.0-or-later
   license_family: GPL
   summary: 'The Succinct Data Structure Library (SDSL)'
   description: |
@@ -52,3 +59,4 @@ extra:
   recipe-maintainers:
     - jvolkening
     - johnlees
+    - yp

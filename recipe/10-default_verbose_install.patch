@@ -1,0 +1,23 @@
+From 516d4f7fe5a22556d1d8dfcaa6027a88f6a266a9 Mon Sep 17 00:00:00 2001
+From: "Michael R. Crusoe" <1330696+mr-c@users.noreply.github.com>
+Date: Mon, 9 Dec 2019 18:07:13 +0100
+Subject: [PATCH] Default to a verbose install
+
+This would be appreciated by Debian and other software packagers who monitor for the correct inclusion of build hardening flags using https://ruderich.org/simon/blhc/
+---
+ install.sh | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/install.sh b/install.sh
+index 99187cf0..c9928bd5 100755
+--- a/install.sh
++++ b/install.sh
+@@ -53,7 +53,7 @@ if [ $? != 0 ]; then
+ 	exit 1
+ fi
+ 
+-cmake -DCMAKE_INSTALL_PREFIX="${SDSL_INSTALL_PREFIX}" .. # run cmake 
++cmake -DCMAKE_VERBOSE_MAKEFILE=ON -DCMAKE_INSTALL_PREFIX="${SDSL_INSTALL_PREFIX}" .. # run cmake 
+ if [ $? != 0 ]; then
+ 	echo "ERROR: CMake build failed."
+ 	exit 1
