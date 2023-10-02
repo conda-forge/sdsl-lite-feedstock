@@ -22,7 +22,7 @@ test:
     - {{ compiler('cxx') }}    
   commands:
     - test -e $PREFIX/include/sdsl/sdsl_concepts.hpp
-    - $CXX $CPPFLAGS examples/print_wt.cpp
+    - $CXX $CPPFLAGS -std=c++17 examples/print_wt.cpp
 
 about:
   home: https://github.com/xxsds/sdsl-lite
