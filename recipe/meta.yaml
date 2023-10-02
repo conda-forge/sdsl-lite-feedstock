@@ -21,7 +21,7 @@ test:
   requires:
     - {{ compiler('cxx') }}    
   commands:
-    - test -d $PREFIX/include/sdsl/sdsl_concepts.hpp
+    - test -e $PREFIX/include/sdsl/sdsl_concepts.hpp
     - $CXX $CPPFLAGS examples/print_wt.cpp
 
 about:
