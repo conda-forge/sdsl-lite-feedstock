@@ -3,13 +3,13 @@ About sdsl-lite-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sdsl-lite-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/simongog/sdsl-lite
+Home: https://github.com/xxsds/sdsl-lite
 
 Package license: GPL-3.0-or-later
 
 Summary: The Succinct Data Structure Library (SDSL)
 
-Development: https://github.com/simongog/sdsl-lite
+Development: https://github.com/xxsds/sdsl-lite
 
 The Succinct Data Structure Library (SDSL) is a powerful and flexible C++11
 library implementing succinct data structures. In total, the library contains
@@ -204,5 +204,6 @@ Feedstock Maintainers
 
 * [@johnlees](https://github.com/johnlees/)
 * [@jvolkening](https://github.com/jvolkening/)
+* [@notestaff](https://github.com/notestaff/)
 * [@yp](https://github.com/yp/)
 
