@@ -17,7 +17,7 @@ source:
     - 15-fix_cmake.patch
 
 build:
-  number: 1002
+  number: 1003
   # TODO: fix Windows build/testing
   skip: true  # [win]
   #script: "del %SRC_DIR%\\build\\CMakeCache.txt && %SRC_DIR%\\install.bat %PREFIX%"  # [win]
